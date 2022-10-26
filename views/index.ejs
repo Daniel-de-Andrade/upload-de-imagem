@@ -1,0 +1,35 @@
+<%- include('partials/head') %>
+<%- include('partials/header') %>
+<main class="container mt-5 p-5 bg-light border rounded">
+    <section class="row">
+        <article class="col-12">
+            <p>Preencha o formulário a seguir</p>
+            <form method="post" action="profile" enctype="multipart/form-data">
+                <div class="row mb-3">
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Nome">
+                            <label for="name" class="form-label">Nome</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="lastname" name="lastname"
+                                placeholder="Sobrenome">
+                            <label for="lastname" class="form-label">Sobrenome</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="image" class="form-label">Avatar</label>
+                        <input type="file" class="form-control" id="image" name="image" aria-describedby="imageHelp">
+                        <div id="imageHelp" class="form-text">Insira arquivos .jpg ou .png (máx. 4MB).</div>
+                    </div>
+                </div>
+                <button type="submit" name="upload" class="btn btn-primary align-right">Enviar</button>
+            </form>
+        </article>
+    </section>
+</main>
+<%- include('partials/footer') %>
